@@ -19,7 +19,6 @@ export const systemIngredients = sqliteTable('system_ingredients', {
     fatPer100: real('fat_per_100').default(0),
     fiberPer100: real('fiber_per_100').default(0),
     sugarPer100: real('sugar_per_100').default(0),
-    sodiumPer100: real('sodium_per_100').default(0),
     version: integer('version').default(1),
     createdAt: text('created_at').default('CURRENT_TIMESTAMP')
 }, (table) => ([
@@ -39,7 +38,6 @@ export const userIngredients = sqliteTable('user_ingredients', {
     fatPer100: real('fat_per_100').default(0),
     fiberPer100: real('fiber_per_100').default(0),
     sugarPer100: real('sugar_per_100').default(0),
-    sodiumPer100: real('sodium_per_100').default(0),
     createdAt: text('created_at').default('CURRENT_TIMESTAMP'),
     deletedAt: text('deleted_at')
 }, (table) => ([

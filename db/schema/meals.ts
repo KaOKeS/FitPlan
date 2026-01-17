@@ -12,23 +12,18 @@ export const systemMeals = sqliteTable('system_meals', {
     i18nKey: text('i18n_key').notNull().unique(),
     category: text('category').notNull(),
     prepTime: integer('prep_time'),
-    cookTime: integer('cook_time'),
     servings: integer('servings').default(1),
     difficulty: text('difficulty'),
     caloriesPerServing: integer('calories_per_serving'),
     proteinPerServing: real('protein_per_serving').default(0),
     carbsPerServing: real('carbs_per_serving').default(0),
     fatPerServing: real('fat_per_serving').default(0),
-    lastCalculation: text('last_calculation'),
-    needsRecalculation: integer('needs_recalculation').default(1),
-    imageUrl: text('image_url'),
     source: text('source').default('built-in'),
     version: integer('version').default(1),
     createdAt: text('created_at').default('CURRENT_TIMESTAMP')
 }, (table) => ([
     // Performance indexes for common queries
     index('idx_system_meals_category').on(table.category),
-    index('idx_system_meals_recalculation').on(table.needsRecalculation),
     index('idx_system_meals_i18nKey').on(table.i18nKey)
 ]));
 
@@ -38,21 +33,16 @@ export const userMeals = sqliteTable('user_meals', {
     description: text('description'),
     category: text('category').notNull(),
     prepTime: integer('prep_time'),
-    cookTime: integer('cook_time'),
     servings: integer('servings').default(1),
     caloriesPerServing: integer('calories_per_serving'),
     proteinPerServing: real('protein_per_serving').default(0),
     carbsPerServing: real('carbs_per_serving').default(0),
     fatPerServing: real('fat_per_serving').default(0),
-    lastCalculation: text('last_calculation'),
-    needsRecalculation: integer('needs_recalculation').default(1),
-    imagePath: text('image_path'),
     createdAt: text('created_at').default('CURRENT_TIMESTAMP'),
     deletedAt: text('deleted_at')
 }, (table) => ([
     // Performance indexes for common queries
     index('idx_user_meals_category').on(table.category),
-    index('idx_user_meals_recalculation').on(table.needsRecalculation),
     index('idx_user_meals_name').on(table.name),
     index('idx_user_meals_deleted').on(table.deletedAt)
 ]));
