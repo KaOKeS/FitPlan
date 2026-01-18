@@ -1,1 +1,7 @@
-{ "home": "Strona główna", "meals": "Posiłki" }
+{
+  "home": "Strona główna",
+  "meals": "Posiłki",
+  "ingredients": "Składniki",
+  "shopping_list": "Lista zakupów",
+  "account": "Konto"
+}

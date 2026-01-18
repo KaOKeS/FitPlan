@@ -1,1 +1,7 @@
-{ "home": "Home", "meals": "Meals" }
+{
+  "home": "Home",
+  "meals": "Meals",
+  "ingredients": "Ingredients",
+  "shopping_list": "Shopping List",
+  "account": "Account"
+}
