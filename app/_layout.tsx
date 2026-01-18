@@ -7,12 +7,11 @@ import { ActivityIndicator } from "react-native";
 
 import { seedDatabase } from "@/db/seeds/index";
 import migrations from "@/drizzle/migrations";
-import { DB_FILE_NAME } from "@env";
 import { drizzle } from "drizzle-orm/expo-sqlite";
 import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
 
 export default function RootLayout() {
-  const expoDb = openDatabaseSync(DB_FILE_NAME);
+  const expoDb = openDatabaseSync("FitPlan");
   const db = drizzle(expoDb);
   const { success, error } = useMigrations(db, migrations);
 
@@ -26,7 +25,7 @@ export default function RootLayout() {
   return (
     <Suspense fallback={<ActivityIndicator size="large" />}>
       <SQLiteProvider
-        databaseName={DB_FILE_NAME}
+        databaseName={"FitPlan"}
         options={{ enableChangeListener: true }}
         useSuspense
       >
