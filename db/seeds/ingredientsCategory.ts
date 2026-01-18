@@ -1,0 +1,17 @@
+export const ingredientCategoriesData = [
+  { i18nKey: "categories.vegetables", icon: "🥕", sortOrder: 1 },
+  { i18nKey: "categories.fruits", icon: "🍎", sortOrder: 2 },
+  { i18nKey: "categories.dairy", icon: "🥛", sortOrder: 3 },
+  { i18nKey: "categories.meat_poultry", icon: "🍖", sortOrder: 4 },
+  { i18nKey: "categories.fish_seafood", icon: "🐟", sortOrder: 5 },
+  { i18nKey: "categories.grains", icon: "🌾", sortOrder: 6 },
+  { i18nKey: "categories.nuts_seeds", icon: "🥜", sortOrder: 7 },
+  { i18nKey: "categories.spices_herbs", icon: "🌿", sortOrder: 8 },
+  { i18nKey: "categories.oils_fats", icon: "🫒", sortOrder: 9 },
+  { i18nKey: "categories.sweets", icon: "🍯", sortOrder: 10 },
+  { i18nKey: "categories.beverages", icon: "🥤", sortOrder: 11 },
+  { i18nKey: "categories.legumes", icon: "🫘", sortOrder: 12 },
+  { i18nKey: "categories.eggs", icon: "🥚", sortOrder: 13 },
+  { i18nKey: "categories.bakery", icon: "🍞", sortOrder: 14 },
+  { i18nKey: "categories.other", icon: "📦", sortOrder: 99 },
+];
