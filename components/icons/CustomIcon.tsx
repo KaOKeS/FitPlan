@@ -45,10 +45,14 @@ export function CustomIcon({
   return (
     <View
       style={{
-        backgroundColor: focused ? "#a2cf1bb5" : "transparent",
-        borderRadius: iconSize / 5,
+        width: 72,
+        height: 80,
+        backgroundColor: focused ? "#63c90a" : "#a2cf1b",
+        borderRadius: 70,
         justifyContent: "center",
         alignItems: "center",
+        borderWidth: focused ? 1 : 0,
+        borderColor: "black",
       }}
     >
       <Image source={src} style={{ width: iconSize, height: iconSize }} />

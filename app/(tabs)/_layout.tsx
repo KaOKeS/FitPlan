@@ -1,5 +1,4 @@
 import { CustomIcon } from "@/components/icons/CustomIcon";
-import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { Tabs } from "expo-router";
 
@@ -18,10 +17,55 @@ export default function TabsLayout() {
             style={{ flex: 1 }}
           />
         ),
+        tabBarLabelStyle: {
+          display: "none", // ukrycie domyślnego labela, jeśli chcesz
+        },
       }}
     >
       <Tabs.Screen
         name="index"
+        options={{
+          tabBarIcon: ({ size, focused }) => (
+            <CustomIcon
+              src={require("../../assets/images/icons/home_try.png")}
+              iconSize={size}
+              fontSize={size / 2}
+              focused={focused}
+              title="Home"
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="meals"
+        options={{
+          tabBarIcon: ({ size, focused }) => (
+            <CustomIcon
+              src={require("../../assets/images/icons/home_try.png")}
+              iconSize={size}
+              fontSize={size / 2}
+              focused={focused}
+              title="Meals"
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="ingredients"
+        options={{
+          tabBarIcon: ({ size, focused }) => (
+            <CustomIcon
+              src={require("../../assets/images/icons/home_try.png")}
+              iconSize={size}
+              fontSize={size / 2}
+              focused={focused}
+              title="Ingredients"
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="shopping-list"
         options={{
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
@@ -35,38 +79,16 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="meals"
-        options={{
-          title: "meals",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="restaurant" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="ingredients"
-        options={{
-          title: "ingredients",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="leaf" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="shopping-list"
-        options={{
-          title: "shopping_list",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="basket" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="account"
         options={{
-          title: "account",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person" size={size} color={color} />
+          tabBarIcon: ({ size, focused }) => (
+            <CustomIcon
+              src={require("../../assets/images/icons/home_try.png")}
+              iconSize={size}
+              fontSize={size / 2}
+              focused={focused}
+              title="Account"
+            />
           ),
         }}
       />
