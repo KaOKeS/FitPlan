@@ -1,15 +1,10 @@
-import { Text, View } from "react-native";
+import PageLayout from "@/components/PageLayout";
+import { Text } from "react-native";
 
-export default function Index() {
+export default function AccountScreen() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <PageLayout title="Witaj w FitPlan" subtitle="">
+      <Text>Test</Text>
+    </PageLayout>
   );
 }

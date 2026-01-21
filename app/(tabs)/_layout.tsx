@@ -27,7 +27,7 @@ export default function TabsLayout() {
         options={{
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
-              src={require("../../assets/images/icons/home_try.png")}
+              src={require("../../assets/images/icons/home_icon.png")}
               iconSize={size}
               fontSize={size / 2}
               focused={focused}
@@ -41,7 +41,7 @@ export default function TabsLayout() {
         options={{
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
-              src={require("../../assets/images/icons/home_try.png")}
+              src={require("../../assets/images/icons/meals_icon.png")}
               iconSize={size}
               fontSize={size / 2}
               focused={focused}
@@ -55,7 +55,7 @@ export default function TabsLayout() {
         options={{
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
-              src={require("../../assets/images/icons/home_try.png")}
+              src={require("../../assets/images/icons/ingredients_icon.png")}
               iconSize={size}
               fontSize={size / 2}
               focused={focused}
@@ -69,7 +69,7 @@ export default function TabsLayout() {
         options={{
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
-              src={require("../../assets/images/icons/home_try.png")}
+              src={require("../../assets/images/icons/shopping_list_icon.png")}
               iconSize={size}
               fontSize={size / 2}
               focused={focused}
@@ -83,7 +83,7 @@ export default function TabsLayout() {
         options={{
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
-              src={require("../../assets/images/icons/home_try.png")}
+              src={require("../../assets/images/icons/account_icon.png")}
               iconSize={size}
               fontSize={size / 2}
               focused={focused}

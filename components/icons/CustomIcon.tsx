@@ -47,11 +47,11 @@ export function CustomIcon({
       style={{
         width: 72,
         height: 80,
-        backgroundColor: focused ? "#63c90a" : "#a2cf1b",
+        backgroundColor: focused ? "#3aaf03" : "#a2cf1b",
         borderRadius: 70,
         justifyContent: "center",
         alignItems: "center",
-        borderWidth: focused ? 1 : 0,
+        borderWidth: 1,
         borderColor: "black",
       }}
     >
