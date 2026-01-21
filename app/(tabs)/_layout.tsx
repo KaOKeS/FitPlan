@@ -1,31 +1,43 @@
-import "@/i18";
+import { CustomIcon } from "@/components/icons/CustomIcon";
 import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 import { Tabs } from "expo-router";
-import { useTranslation } from "react-i18next";
 
 export default function TabsLayout() {
-  const { t } = useTranslation();
   return (
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: "#007AFF",
         tabBarInactiveTintColor: "#8E8E93",
         headerShown: false,
+        tabBarBackground: () => (
+          <LinearGradient
+            colors={["#4CAF50", "#9d9240"]} // gradient od koloru start do koloru end
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
+            style={{ flex: 1 }}
+          />
+        ),
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: "home",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" size={size} color={color} />
+          tabBarIcon: ({ size, focused }) => (
+            <CustomIcon
+              src={require("../../assets/images/icons/home_try.png")}
+              iconSize={size}
+              fontSize={size / 2}
+              focused={focused}
+              title="Shopping list"
+            />
           ),
         }}
       />
       <Tabs.Screen
         name="meals"
         options={{
-          title: t("meals"),
+          title: "meals",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="restaurant" size={size} color={color} />
           ),
@@ -34,7 +46,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="ingredients"
         options={{
-          title: t("ingredients"),
+          title: "ingredients",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="leaf" size={size} color={color} />
           ),
@@ -43,7 +55,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="shopping-list"
         options={{
-          title: t("shopping_list"),
+          title: "shopping_list",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="basket" size={size} color={color} />
           ),
@@ -52,7 +64,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="account"
         options={{
-          title: t("account"),
+          title: "account",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" size={size} color={color} />
           ),
