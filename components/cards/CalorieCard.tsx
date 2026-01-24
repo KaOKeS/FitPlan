@@ -1,13 +1,12 @@
 import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 type Props = {
   image: any;
-  calories: number;
-  protein: number;
-  carbs: number;
-  fat: number;
-  onDefaultPress?: () => void;
+  calories: number | undefined;
+  protein: number | undefined;
+  carbs: number | undefined;
+  fat: number | undefined;
 };
 
 export default function CalorieCard({
@@ -16,7 +15,6 @@ export default function CalorieCard({
   protein,
   carbs,
   fat,
-  onDefaultPress,
 }: Props) {
   return (
     <View style={styles.container}>
@@ -40,9 +38,7 @@ export default function CalorieCard({
             <Text style={styles.macros}>
               B: {protein}g W: {carbs}g T: {fat}g
             </Text>
-            <TouchableOpacity onPress={onDefaultPress}>
-              <Text style={styles.defaultText}>Default target</Text>
-            </TouchableOpacity>
+            <Text style={styles.defaultText}>Default target</Text>
           </View>
         </View>
       </View>
@@ -52,9 +48,9 @@ export default function CalorieCard({
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    marginTop: 50,
   },
   row: {
     flexDirection: "row",
