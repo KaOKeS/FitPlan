@@ -11,7 +11,8 @@ import {
 
 type Props = {
   src: any;
-  iconSize?: number;
+  iconHeight?: number;
+  iconWidth?: number;
   focused?: boolean;
   title: string;
   fontSize?: number;
@@ -21,7 +22,8 @@ type Props = {
 
 export function CustomIcon({
   src,
-  iconSize = 24,
+  iconHeight = 24,
+  iconWidth = 24,
   focused = false,
   title,
   fontBorder = 2,
@@ -55,7 +57,7 @@ export function CustomIcon({
         borderColor: "black",
       }}
     >
-      <Image source={src} style={{ width: iconSize, height: iconSize }} />
+      <Image source={src} style={{ width: iconWidth, height: iconHeight }} />
       <Svg height={svgHeight} width={svgWidth}>
         <Defs>
           <LinearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">

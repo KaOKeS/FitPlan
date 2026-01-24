@@ -28,7 +28,8 @@ export default function TabsLayout() {
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
               src={require("../../assets/images/icons/home_icon.png")}
-              iconSize={size}
+              iconHeight={45}
+              iconWidth={45}
               fontSize={size / 2}
               focused={focused}
               title="Home"
@@ -42,7 +43,8 @@ export default function TabsLayout() {
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
               src={require("../../assets/images/icons/meals_icon.png")}
-              iconSize={size}
+              iconHeight={45}
+              iconWidth={45}
               fontSize={size / 2}
               focused={focused}
               title="Meals"
@@ -56,10 +58,11 @@ export default function TabsLayout() {
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
               src={require("../../assets/images/icons/ingredients_icon.png")}
-              iconSize={size}
+              iconHeight={45}
+              iconWidth={50}
               fontSize={size / 2}
               focused={focused}
-              title="Ingredients"
+              title="Ingred."
             />
           ),
         }}
@@ -70,7 +73,8 @@ export default function TabsLayout() {
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
               src={require("../../assets/images/icons/shopping_list_icon.png")}
-              iconSize={size}
+              iconHeight={40}
+              iconWidth={40}
               fontSize={size / 2}
               focused={focused}
               title="Shopping list"
@@ -84,7 +88,8 @@ export default function TabsLayout() {
           tabBarIcon: ({ size, focused }) => (
             <CustomIcon
               src={require("../../assets/images/icons/account_icon.png")}
-              iconSize={size}
+              iconHeight={45}
+              iconWidth={45}
               fontSize={size / 2}
               focused={focused}
               title="Account"
