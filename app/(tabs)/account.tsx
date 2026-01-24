@@ -3,7 +3,7 @@ import PageLayout from "@/components/PageLayout";
 
 export default function AccountScreen() {
   return (
-    <PageLayout title="" subtitle="">
+    <PageLayout title="Account Settings" subtitle="Manage your nutrition goals">
       <CalorieCard
         image={require("../../assets/images/icons/home_icon.png")}
         calories={200}
