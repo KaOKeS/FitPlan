@@ -1,10 +1,16 @@
+import CalorieCard from "@/components/cards/CalorieCard";
 import PageLayout from "@/components/PageLayout";
-import { Text } from "react-native";
 
 export default function AccountScreen() {
   return (
     <PageLayout title="" subtitle="">
-      <Text>Test</Text>
+      <CalorieCard
+        image={require("../../assets/images/icons/home_icon.png")}
+        calories={200}
+        protein={30}
+        fat={20}
+        carbs={30}
+      />
     </PageLayout>
   );
 }
